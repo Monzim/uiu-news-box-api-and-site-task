@@ -5,6 +5,8 @@ the build the connect with my Postgres database. It will run on port 8080.
 
 TO RUN THE SERVER:
 
+Server ruining on port 8080
+
 ```
 cd server
 ./server
