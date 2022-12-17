@@ -1,9 +1,8 @@
 import Link from "next/link";
 
 const Navbar = () => {
-  // a function that return random number between 1 and 10
   const random = () => {
-    return Math.floor(Math.random() * 10) + 1;
+    return Math.floor(Math.random() * 15) + 1;
   };
   return (
     <nav className="flex items-center justify-between px-4 pb-1 pt-2 bg-gray-800">

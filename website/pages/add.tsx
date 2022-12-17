@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 
 function AddUser() {
@@ -22,7 +23,9 @@ function AddUser() {
         }
       );
 
-      console.log(response.status);
+      console.log("Successfully added user to database");
+      setEmail("");
+      setName("");
     } catch (error) {
       console.error(error);
     }
@@ -30,6 +33,9 @@ function AddUser() {
 
   return (
     <>
+      <Head>
+        <title>Add User</title>
+      </Head>
       <div>
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-lg text-center">

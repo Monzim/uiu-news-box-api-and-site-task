@@ -15,7 +15,7 @@ export default function Home() {
         <section>
           <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
             <div className="mx-auto max-w-xl text-center">
-              <h1 className="text-3xl font-extrabold sm:text-5xl">
+              <h1 className="text-2xl font-extrabold sm:text-5xl">
                 Server built with{" "}
                 <Link
                   href={"https://go.dev/"}
@@ -23,8 +23,8 @@ export default function Home() {
                 >
                   Go
                 </Link>
-                <strong className="font-extrabold text-red-700 sm:block">
-                  Increase Conversion.
+                <strong className="font-extrabold text-red-700 sm:block my-2 text-2xl">
+                  Next.js and Tailwind
                 </strong>
               </h1>
 

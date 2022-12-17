@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next/types";
 
 type User = {
@@ -13,6 +14,9 @@ function MyComponent({
 
   return (
     <>
+      <Head>
+        <title>All Users</title>
+      </Head>
       <div className="overflow-x-auto justify-center flex">
         <table className="w-11/12 divide-y-2 divide-gray-200 text-sm ">
           <thead>

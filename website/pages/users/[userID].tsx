@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next/types";
 
@@ -16,6 +17,9 @@ function MyComponent({
   if (user.id === "") {
     return (
       <>
+        <Head>
+          <title>Not Found</title>
+        </Head>
         <div className="flex justify-center items-center h-screen">
           <div className="text-center">
             User Not Found
@@ -28,6 +32,9 @@ function MyComponent({
 
   return (
     <>
+      <Head>
+        <title>{user.name} | user</title>
+      </Head>
       <div className="flex justify-center items-center mt-4 ">
         <div className="w-10/12 lg:w-1/2  p-4 rounded-lg border-2 border-black">
           <div className="flex justify-between ">
@@ -76,6 +83,11 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 export default MyComponent;
 
 const Bottom = () => {
+  const random = () => {
+    return Math.floor(Math.random() * 15) + 1;
+  };
+
+  const rand = random();
   return (
     <>
       <div>
@@ -83,7 +95,13 @@ const Bottom = () => {
           <div>
             <p>See other users just change the id in the url</p>
             <p className="mt-2">
-              Example: <Link href="/users/2">/users/2</Link>
+              Example:{" "}
+              <Link
+                href={`/users/${rand}`}
+                className="hover:underline italic hover:font-semibold"
+              >
+                /users/{rand}
+              </Link>
             </p>
           </div>
         </div>
